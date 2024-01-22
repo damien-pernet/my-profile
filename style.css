@@ -3,10 +3,6 @@ body {
   color: #000080;
   background-color: #f5f5f5;
 }
-list-inline > li {
-  display: inline; /* change list item behavior to inline */
-  padding: 0px 20px; /* add som left/right padding between list items */
-}
 
 .container {
   max-width: 800px;
@@ -14,6 +10,24 @@ list-inline > li {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.profile-image {
+  width: 150px; /* Ajustez la taille selon vos besoins */
+  border-radius: 50%;
+}
+
+.passion-card,
+.networks-card {
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2, h3 {
@@ -44,28 +58,15 @@ a:hover {
 
 .profile-links li a {
   color: #3c3c3c;
-
-
-@media (max-width: 767px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .profile-image {
-    display: block;
-    margin: 0 auto 20px;
-  }
-
-  .profile-name {
-    text-align: center;
-  }
-
-  .profile-description {
-    margin-bottom: 0;
-  }
-
-  .profile-links {
-    text-align: center;
-  }
 }
 
+@media (max-width: 767px) {
+  .profile-image {
+    width: 100%; /* Utilisez la largeur maximale pour les écrans étroits */
+  }
+
+  .passion-card,
+  .networks-card {
+    margin-top: 10px;
+  }
+}
